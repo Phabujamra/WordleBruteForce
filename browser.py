@@ -9,8 +9,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 class Browser:
-    def __init__(self, driver_path: str, headless: bool = True) -> None:
+    def __init__(self, driver_path: str,  url: str, headless: bool = True) -> None:
         self.driver_path = driver_path
+        self.url = url
         self.headless = headless
         self.driver = self._initialize_driver()
 
